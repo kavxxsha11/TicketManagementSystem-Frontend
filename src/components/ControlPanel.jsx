@@ -1,19 +1,11 @@
 import React from 'react';
 import '../styles/ControlPanel.css';
 
-function ControlPanel({ addLog }) {
-    const handleStart = () => {
-        addLog('System started');
-    };
-
-    const handleStop = () => {
-        addLog('System stopped');
-    };
-
+function ControlPanel({ addLog, onStart, onStop }) {
     return (
         <div className="control-panel">
-            <button onClick={handleStart}>Start</button>
-            <button onClick={handleStop}>Stop</button>
+            <button onClick={onStart}>Start</button>
+            <button onClick={onStop}>Stop</button>
         </div>
     );
 }
